@@ -1,0 +1,674 @@
+@use 'sass:math';
+
+.articles-panel {
+  border: solid;
+  border-color: white;
+  margin: 5px;
+}
+
+
+/*Animation 1*/
+
+.animate-svg1 {
+  width: 100%;
+  height: 100%;
+  font-family: Lora;
+  stroke: #ffa5d8;
+  font-size: 1rem;
+}
+.animate-svg1:hover{
+	animation: textAnimate 5s infinite alternate;
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: hsl(189, 68%, 75%);
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%, 0%);
+  }
+}
+
+
+/* END */
+
+
+/*Animation 2*/
+
+.btn-shine {
+  padding: 12px 48px;
+  color: #ffffff;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-shine:hover{
+	animation: shine 3s infinite linear;
+  	animation-fill-mode: forwards;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+
+/* END */
+
+
+/* Animation 3 */
+
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+.neons {
+  font-family: 'Codystar';
+  font-size: 1rem;
+  font-weight: bold;
+  height:100%;
+}
+.neons:hover {
+	-webkit-animation: glow1 2s ease-in-out infinite alternate;
+  	-moz-animation: glow1 2s ease-in-out infinite alternate;
+  	animation: glow1 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow1 {
+  from {
+    color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  to {
+    color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
+
+
+/* END */
+
+
+/* Animation 4 */
+
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+.animate-container8{
+	height:100%
+}
+.animate-container8:hover {
+  transform: translate(0, 50px);
+  animation: shine 2s forwards, flicker 3s infinite;
+	.flicker {
+	  animation: shine 2s forwards, blink 3s 2s infinite;
+	}
+	
+	.fast-flicker {
+	  animation: shine 2s forwards, blink 10s 1s infinite;
+	}
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd, -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd, 0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+  28%,
+  33% {
+    color: #ff65bd;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2483;
+    text-shadow: none;
+  }
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd, -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd, 0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.9;
+  }
+  6% {
+    opacity: 0.85;
+  }
+  8% {
+    opacity: 0.95;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  11% {
+    opacity: 0.922;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  14% {
+    opacity: 0.95;
+  }
+  16% {
+    opacity: 0.98;
+  }
+  17% {
+    opacity: 0.9;
+  }
+  19% {
+    opacity: 0.93;
+  }
+  20% {
+    opacity: 0.99;
+  }
+  24% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0.94;
+  }
+  28% {
+    opacity: 0.98;
+  }
+  37% {
+    opacity: 0.93;
+  }
+  38% {
+    opacity: 0.5;
+  }
+  39% {
+    opacity: 0.96;
+  }
+  42% {
+    opacity: 1;
+  }
+  44% {
+    opacity: 0.97;
+  }
+  46% {
+    opacity: 0.94;
+  }
+  56% {
+    opacity: 0.9;
+  }
+  58% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.99;
+  }
+  68% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  72% {
+    opacity: 0.95;
+  }
+  93% {
+    opacity: 0.93;
+  }
+  95% {
+    opacity: 0.95;
+  }
+  97% {
+    opacity: 0.93;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* END */
+
+
+/* Animation 5 */
+
+.animate-container1 {
+  position: relative;
+  display: flex;
+  background-color: #2E2473;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.animate-text1 {
+  color: #6CD9CE;
+  font-size: 1rem;
+  transform: translateY(-600px);
+  animation: 1.2s slideIn ease-in-out forwards 1s;
+  z-index: 10;
+  opacity: 0;
+  position: relative;
+}
+
+.animate-text1::before {
+  content: '';
+  width: 0%;
+  height: 50%;
+  top: 28%;
+  background-color: #D93BA1;
+  position: absolute;
+  animation: 1s underline ease-in-out forwards 2s;
+  mix-blend-mode: screen;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  background-color: #D93BA1;
+  transform: scale(.5);
+  animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+
+@keyframes skewBg {
+  0% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes underline {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+/* END */
+
+
+/* Animation 6 */
+
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+.animate-container2 {
+  font-family: 'Baloo Paaji', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 220px;
+  position: relative;
+  animation-iteration-count: infinite;
+
+}
+
+.animate-text2, .animate-text3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  top: 0;
+  span {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+  }
+}
+
+.animate-text2 span {
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  &:first-child {
+    animation-delay: 3s;
+  }
+  &:first-letter {
+    color: #ffe221;
+    animation-delay: 1s;
+  }
+}
+
+.animate-text3 {
+  position: absolute;
+  span {
+    animation-delay: 4.1s;
+    -webkit-animation-fill-mode: forwards;
+    &:first-child {
+      animation-delay: 4.2s;
+    }
+    &:last-child {
+      color: #ffe221;
+      animation-delay: 4s;
+    }
+  }
+}
+
+@keyframes titleAnimation {
+  10% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+  }
+}
+
+
+/* END */
+
+
+/* Animation 7 */
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+.animate-container3 {
+  color: #fff;
+  height: 100%;
+  overflow: hidden;
+}
+.animate-text4{
+	height: 100%;
+  	background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+	font-size: 1rem;
+  	font-family: "Source Sans Pro", sans-serif;
+}
+
+.animate-text4:hover {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow2 2500ms linear infinite 2000ms;
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow2 {
+    40% {
+      text-shadow: 0 0 10px #fff;
+    }
+  }
+}
+
+
+/* END */
+
+
+/* Animation 8 */
+
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+.animate-container4 {
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  background-image: repeating-linear-gradient( to bottom, transparent 7px, rgba(0, 0, 0, 0.8) 9px, rgba(0, 0, 0, 0.8) 13px, transparent 13px);
+}
+.animate-text5 {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+}
+.animate-text5:hover{
+  animation: blink 3s infinite;
+  -webkit-animation: blink 5s infinite;
+	
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+
+/* END */
+
+
+/* Animation 9 */
+
+.svg-text2 {
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+}
+
+/* END */
+
+
+/* Animation 10 */
+
+// Love dynamically typed text? You're gonna love this
+// Edit these strings to see them typed on the screen:
+$strings: ( "A quick brown fox jumps over the lazy dog." 
+			"Pack my bag with five dozen of liquor jugs." 
+			"Blackdaws love my sphinx of quartz."
+			"Sphinax of black quartz, judge my vow!");
+// now for some timing (in seconds)
+$durCharFwd: 0.05; // character typed
+$durFullGap: 0.05; // time between typed/delete
+$durCharBwd: 0.01; // character deleted
+$durDoneGap: 0.05; // time between strings
+// initializing some variables and functions ✊🏼
+$charCount: 0;
+$durTotal: 0;
+@each $string in $strings {
+  $charCount: $charCount + str-length($string);
+  $durTotal: $durTotal + (str-length($string) * ($durCharFwd + $durCharBwd)) + $durFullGap + $durDoneGap;
+}
+
+@function percent($string,
+$letter,
+$modifier) {
+  $stringsPast: $string - 1;
+  $time: 0;
+  @while $stringsPast>0 {
+    $time: $time + (($durCharFwd + $durCharBwd) * (str-length(nth($strings, $stringsPast)))) + $durFullGap + $durDoneGap;
+    $stringsPast: $stringsPast - 1;
+  }
+  @if $letter <=str-length(nth($strings,
+  $string)) {
+    $time: $time + ($durCharFwd * ($letter - 1));
+  }
+  @else {
+    $time: $time + ($durCharFwd * str-length(nth($strings, $string))) + $durFullGap + ($durCharBwd * ($letter - str-length(nth($strings, $string))));
+  }
+  @return (math.div($time,$durTotal) * 100+$modifier)+"%";
+}
+
+$currentPercentage: 0;
+// now THIS is where the magic happens... ✨
+@keyframes typed {
+  @for $i from 1 through length($strings) {
+    // @for $j from 1 through (str-length(nth($strings, $i)) * 2 - 1) {
+    @for $j from 1 through (str-length(nth($strings,
+    $i)) * 2) {
+      /* string #{$i}, char #{$j} */
+      @if $j < str-length(nth($strings,
+      $i)) * 2 {
+        // not last character deleted
+        #{percent($i, $j, 0)},
+        #{percent($i, $j+1, -0.001)} {
+          @if $j <=str-length(nth($strings,
+          $i)) {
+            content: quote(#{str_slice(nth($strings, $i), 1, $j)});
+          }
+          @else {
+            content: quote(#{str_slice(nth($strings, $i), 1, str-length(nth($strings, $i)) - ($j - str-length(nth($strings, $i))))});
+          }
+        }
+      }
+      @else {
+        @if $i < length($strings) {
+          // not last string
+          #{percent($i, $j, 0)},
+          #{percent($i+1, 1, -0.001)} {
+            content: "​"; // zero-width space to retain element height
+          }
+        }
+        @else {
+          // last string
+          #{percent($i, $j, 0)},
+          100% {
+            content: "​"; // zero-width space to retain element height
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes beam-blink {
+  75% {
+    border-color: transparent;
+  }
+}
+
+.animate-container5 {
+  height: 50vh;	
+  background-color: #000;
+  background-image: radial-gradient(rgba(#fff, 0.125), rgba(#fff, 0)), linear-gradient(to bottom, #000, #000 2px, #111 3px);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: cover, 100% 3px;
+
+}
+.animate-text6{
+	
+	height: 50vh;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'VT323', monospace, sans-serif;
+  color: #3f3; // hacker green
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &::after {
+    content: "​"; // zero-width space to retain element height
+    position: relative;
+    display: inline-block;
+    padding-right: 3px;
+    padding-right: calc(3px + 0.1vw);
+    border-right: 10px solid rgba(#3f3, 0.75);
+    border-right: calc(1.1vw + 4px) solid rgba(#3f3, 0.75);
+    text-shadow: 0 0 5px rgba(51,255,51,0.75);
+/*    animation: typed #{$durTotal + "s"} linear 1s infinite, beam-blink 1s infinite;*/
+  }
+}
+
+.animate-text6:hover{
+	&::after {
+      animation: typed #{$durTotal + "s"} linear 1s infinite, beam-blink 1s infinite;
+	}
+}
+/* END */
+
+
+/* Animation 12 */
+
+
+/* END */
+
+
+/* Animation 13 */
+
+
+/* END */
+
+
+/* Animation 14 */
+
+
+/* END */
+
+
+/* Animation 15 */
+
+
+/* END */

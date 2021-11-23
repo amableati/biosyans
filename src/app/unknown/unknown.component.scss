@@ -1,0 +1,87 @@
+
+svg{
+  width: 500px;
+    height: 400px;
+    text-align: center;
+    fill: DarkCyan;
+}
+path#XMLID_5_ {
+   
+    fill: DarkCyan;
+    filter: url(#blurFilter4);
+}
+path#XMLID_11_ ,path#XMLID_2_ {
+    fill: DarkCyan;
+}
+.circle{
+  animation: out 2s infinite ease-out;
+  fill: DarkCyan;
+}
+
+#container{
+  text-align:center;
+}
+.message{
+	color:DarkCyan;
+}
+.message:after{
+	content:"]";
+}
+.message:before{
+	content:"[";
+}
+text{
+	font-size: 80px;
+}
+.message:after, .message:before {
+  
+  color: DarkCyan;
+  font-size: 20px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          /*margin:0 50px;*/
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes out {
+  0% {r:1;  opacity: 0.9 ;}
+  25%{r:5;  opacity: 0.3 ;}
+  50%{r:10; opacity: 0.2 ;}
+  75%{r:15;opacity:0.1;}
+ 	100% {r:20;opacity:0;}
+}
+
+@media only screen and (max-width: 600px) {
+	
+	.message{
+		font-size: 8px;
+	}
+	svg{
+	  width: 250px;
+	  height: 250px;
+	}
+}
